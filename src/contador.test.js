@@ -21,5 +21,9 @@ describe("Contador de frases", () => {
     it("Deberia poder identificar las palabras en la frase: 'el esta,nose' que estan separadas por ' ' y '-'", () => {
         expect(getPalabras("el esta,nose")).toEqual(["el", "esta", "nose"]);
     });
+
+    it("Deberia poder identificar las palabras en la frase: 'el esta;nose' que estan separadas por ' ' y '-'", () => {
+        expect(getPalabras("el esta;nose")).toEqual(["el", "esta", "nose"]);
+    });
   });
   
