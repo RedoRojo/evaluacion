@@ -2,7 +2,7 @@ function getPalabras(texto) {
     let palabras = []; 
     let palabra  = ""; 
     for(let i = 0; i<texto.length; i++) {
-        if(texto[i] === " " || texto[i] === "-" || texto[i] === "," || texto[i] === ";") {
+        if(texto[i] === " " || texto[i] === "-" || texto[i] === "," || texto[i] === ";" || texto[i] === ".") {
             if(palabra.length > 0) palabras.push(palabra);
             palabra = ""; 
         } else palabra += texto[i];
