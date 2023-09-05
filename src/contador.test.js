@@ -17,5 +17,9 @@ describe("Contador de frases", () => {
     it("Deberia poder identificar las palabras en la frase: 'el password de-Jose, pero' que estan separadas por ' ' y '-'", () => {
         expect(getPalabras("el password de-Jose, pero")).toEqual(["el", "password", "de", "Jose", "pero"]);
     });
+
+    it("Deberia poder identificar las palabras en la frase: 'el esta,nose' que estan separadas por ' ' y '-'", () => {
+        expect(getPalabras("el esta,nose")).toEqual(["el", "esta", "nose"]);
+    });
   });
   
