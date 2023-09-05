@@ -1,4 +1,4 @@
-import { getPalabras } from "./contador";
+import { getPalabras , getPalabrasMinusculas} from "./contador";
 
 
 describe("Contador de frases", () => {
@@ -28,6 +28,10 @@ describe("Contador de frases", () => {
 
     it("Deberia poder identificar las palabras en la frase: 'el esta.nose' que estan separadas por ' ' y '.'", () => {
         expect(getPalabras("el esta.nose")).toEqual(["el", "esta", "nose"]);
+    });
+
+    it("Deberia devolver una lista con todas la palabras en minusculas dada la lista de palabras como entrada", () => {
+        expect(getPalabrasMinusculas("ESta.esta ESTA")).toEqual(["esta", "esta", "esta"]);
     });
   });
   

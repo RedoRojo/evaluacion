@@ -11,4 +11,12 @@ function getPalabras(texto) {
     return palabras; 
 }
 
-export {getPalabras};
+function getPalabrasMinusculas(texto) {
+    let palabras = getPalabras(texto); 
+    for(let i = 0; i<palabras.length; i++) {
+        palabras[i] = palabras[i].toLowerCase(); 
+    }
+    return palabras; 
+}
+
+export {getPalabras, getPalabrasMinusculas};
