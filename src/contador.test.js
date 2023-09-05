@@ -1,4 +1,4 @@
-import { getPalabras , getPalabrasMinusculas} from "./contador";
+import { getPalabras , getPalabrasMinusculas,ocurrencias} from "./contador";
 
 
 describe("Contador de frases", () => {
@@ -33,5 +33,10 @@ describe("Contador de frases", () => {
     it("Deberia devolver una lista con todas la palabras en minusculas dada la lista de palabras como entrada", () => {
         expect(getPalabrasMinusculas("ESta.esta ESTA")).toEqual(["esta", "esta", "esta"]);
     });
+    
+    it("Deberia devolver las ocurrecias para cada palabra en la frase 'ESta.esta ESTA'", () => {
+        expect(ocurrencias("ESta.esta ESTA")).toEqual({"esta": 3});
+    });
+
   });
   

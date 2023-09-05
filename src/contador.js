@@ -18,5 +18,16 @@ function getPalabrasMinusculas(texto) {
     }
     return palabras; 
 }
+function ocurrencias(texto) {
+    let palabras  = getPalabrasMinusculas(texto); 
 
-export {getPalabras, getPalabrasMinusculas};
+    let contador = {}; 
+
+    for(let i = 0; i<palabras.length; i++) {
+        if(contador[palabras[i]] == undefined) contador[palabras[i]] = 1;
+        else contador[palabras[i]]++; 
+    }
+    return contador; 
+}
+
+export {getPalabras, getPalabrasMinusculas, ocurrencias};
