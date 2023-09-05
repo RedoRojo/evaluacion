@@ -38,5 +38,8 @@ describe("Contador de frases", () => {
         expect(ocurrencias("ESta.esta ESTA")).toEqual({"esta": 3});
     });
 
+    it("Deberia devolver las ocurrecias para cada palabra en la frase 'El password de mi cuenta es PASSWORD. Es un password de poco cuidado'", () => {
+        expect(ocurrencias("El password de mi cuenta es PASSWORD. Es un password de poco cuidado")).toEqual({"el": 1, "password": 3, "de": 2, "mi":1, "cuenta":1, "es":2, "un":1, "poco":1, "cuidado":1});
+    });
   });
   
